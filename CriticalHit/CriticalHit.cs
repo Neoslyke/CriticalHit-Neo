@@ -84,19 +84,16 @@ public class Plugin : TerrariaPlugin
     private void AddDefaultsToConfig()
     {
         var critMessage = new CritMessage();
-        critMessage.Messages.Add("Boom!", new int[3] { 255, 0, 0 });
-        critMessage.Messages.Add("Plop!", new int[3] { 255, 0, 0 });
-        critMessage.Messages.Add("Pop!", new int[3] { 255, 0, 0 });
+        critMessage.Messages.Add("Melee Crit!", new int[3] { 255, 0, 0 });
         this.config.CritMessages.Add(WeaponType.Melee, critMessage);
         critMessage = new CritMessage();
-        critMessage.Messages.Add("Boom!", new int[3] { 255, 0, 0 });
+        critMessage.Messages.Add("Boom Crit!", new int[3] { 255, 0, 0 });
         this.config.CritMessages.Add(WeaponType.Explosive, critMessage);
         critMessage = new CritMessage();
-        critMessage.Messages.Add("Biu biu!", new int[3] { 50, 255, 10 });
+        critMessage.Messages.Add("Ranged Crit!", new int[3] { 50, 255, 10 });
         this.config.CritMessages.Add(WeaponType.Ranged, critMessage);
         critMessage = new CritMessage();
-        critMessage.Messages.Add("Whoomph!", new int[3] { 0, 200, 255 });
-        critMessage.Messages.Add("Crackle!", new int[3] { 0, 200, 255 });
+        critMessage.Messages.Add("Magic Crit!", new int[3] { 0, 200, 255 });
         this.config.CritMessages.Add(WeaponType.Magic, critMessage);
         this.config.Write(this.path);
     }
